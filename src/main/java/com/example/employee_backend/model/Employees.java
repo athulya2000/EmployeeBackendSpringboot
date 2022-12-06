@@ -14,7 +14,7 @@ public class Employees {
     private int employeecode;
     private String employeename;
     private String designation;
-    private int salary;
+    private String salary;
     private String companyname;
     private String mobileno;
     private String username;
@@ -23,7 +23,7 @@ public class Employees {
     public Employees() {
     }
 
-    public Employees(int id, int employeecode, String employeename, String designation, int salary, String companyname, String mobileno, String username, String password) {
+    public Employees(int id, int employeecode, String employeename, String designation, String salary, String companyname, String mobileno, String username, String password) {
         this.id = id;
         this.employeecode = employeecode;
         this.employeename = employeename;
@@ -67,11 +67,11 @@ public class Employees {
         this.designation = designation;
     }
 
-    public int getSalary() {
+    public String getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(String salary) {
         this.salary = salary;
     }
 
