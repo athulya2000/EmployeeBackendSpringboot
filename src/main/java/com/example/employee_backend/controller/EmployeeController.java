@@ -35,6 +35,13 @@ public class EmployeeController {
        map.put("status","success");
        return map;
     }
+    @CrossOrigin(origins = "*")
+    @PostMapping(path="/search",consumes = "application/json",produces = "application/json")
+    public List<Employees> Search(@RequestBody Employees e){
+        String employeecode=String.valueOf(e.getEmployeecode());
+        System.out.println(employeecode);
+        return (List<Employees>) dao.SearchEmployee(e.getEmployeecode());
+    }
 }
 
 
